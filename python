@@ -1,0 +1,14 @@
+import random
+import string
+
+# parola uzunluğu belirlemek için
+password_length = 16
+
+# Parola oluşturma için karakter kümesini tanımlayalım
+character_set = string.ascii_letters + string.digits + string.punctuation
+
+# şifre oluşturalım
+password = ''.join(random.SystemRandom().choice(character_set) for _ in range(password_length))
+
+# şifreyi çıkaralım
+print(password)
